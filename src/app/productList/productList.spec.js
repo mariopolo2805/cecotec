@@ -1,6 +1,3 @@
-import 'angular';
-import 'angular-mocks';
-
 describe('Test suite', () => {
   beforeEach(() => {});
 

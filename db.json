@@ -1,16 +1,19 @@
 {
   "products": [
     {
-      "id": "0.yowkdohoma",
-      "title": "Product1",
-      "description": "Description1",
-      "createdAt": 1529240970750
+      "id": "fdosk",
+      "title": "Product 1",
+      "description": "Description 1"
     },
     {
-      "id": "0.pdxydp8j3b",
-      "description": "Description2",
-      "title": "Product2",
-      "createdAt": 1529240981369
+      "id": "pevwn",
+      "title": "Product 2",
+      "description": "Description 2"
+    },
+    {
+      "id": "yhjta",
+      "title": "Product 3",
+      "description": "Description 3"
     }
   ]
 }

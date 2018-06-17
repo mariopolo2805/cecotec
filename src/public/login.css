@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.login-container {
+  font-family: 'Roboto';
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}

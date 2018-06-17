@@ -33,13 +33,7 @@ const component = {
         })
         .catch((error = {}) => {
           this.isLoading = false;
-          this.$mdToast.show(
-            this.$mdToast
-              .simple()
-              .textContent(`Ops! Something went wrong: ${error.statusText}`)
-              .position('bottom')
-              .hideDelay(3000)
-          );
+          this.manageError(error);
         });
     }
 
@@ -53,13 +47,7 @@ const component = {
         })
         .catch((error = {}) => {
           this.isLoading = false;
-          this.$mdToast.show(
-            this.$mdToast
-              .simple()
-              .textContent(`Ops! Something went wrong: ${error.statusText}`)
-              .position('bottom')
-              .hideDelay(3000)
-          );
+          this.manageError(error);
         });
     }
 
@@ -76,13 +64,7 @@ const component = {
         })
         .catch((error = {}) => {
           this.isLoading = false;
-          this.$mdToast.show(
-            this.$mdToast
-              .simple()
-              .textContent(`Ops! Something went wrong: ${error.statusText}`)
-              .position('bottom')
-              .hideDelay(3000)
-          );
+          this.manageError(error);
         });
     }
 
@@ -96,13 +78,7 @@ const component = {
         })
         .catch((error = {}) => {
           this.isLoading = false;
-          this.$mdToast.show(
-            this.$mdToast
-              .simple()
-              .textContent(`Ops! Something went wrong: ${error.statusText}`)
-              .position('bottom')
-              .hideDelay(3000)
-          );
+          this.manageError(error);
         });
     }
 
@@ -116,7 +92,10 @@ const component = {
           bindToController: true,
           locals: {
             product: {
-              id: Math.random().toString(36),
+              id: Math.random()
+                .toString(36)
+                .replace(/[^a-z]+/g, '')
+                .substr(0, 5),
             },
             new: newProduct => this.$mdDialog.hide(newProduct),
           },
@@ -152,6 +131,19 @@ const component = {
       this.$mdDialog
         .show(confirm)
         .then(() => this.deleteProduct(product), () => {});
+    }
+
+    manageError({ status, statusText }) {
+      if (status === 401) {
+        window.location.href = 'login.html';
+      }
+      this.$mdToast.show(
+        this.$mdToast
+          .simple()
+          .textContent(`Ops! Something went wrong: ${statusText}`)
+          .position('bottom')
+          .hideDelay(3000)
+      );
     }
   },
 };
