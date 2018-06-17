@@ -5,6 +5,7 @@
   "scripts": {
     "api": "node server.js",
     "build": "rimraf dist && webpack --bail --progress --profile",
+    "dev": "concurrently \"npm start\" \"npm run api\"",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "format": "eslint --fix",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -27,6 +28,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.1.18",
+    "concurrently": "^3.5.1",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",

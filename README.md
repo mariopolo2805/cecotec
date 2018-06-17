@@ -9,8 +9,7 @@
 
 ## Quick start
  - `npm i` to install all dependencies
- - `npm start` to start AngularJS app
- - `npm run api` to start api
+ - `npm run dev` to start AngularJS app & API
  - `npm test` to run test
 
 > App available at http://localhost:8080
