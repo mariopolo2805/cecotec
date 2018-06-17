@@ -1,0 +1,30 @@
+/*--  [normalize]  ---------------------------------------------------*/
+@import "../../node_modules/normalize.css/normalize.css";
+/*--  [angular-materials]  ------------------------------------------------*/
+@import "../../node_modules/angular-material/angular-material.min.css";
+/*------------------------------------------------------------------
+[LAYOUT]
+------------------------------------------------------------------*/
+body {
+  position: relative;
+  height: 100%;
+
+  .drawer {
+    z-index: 100;
+  }
+
+  main {
+    position: relative;
+
+    section {
+      position: relative;
+      height: 0;
+      overflow-y: auto;
+
+      article {
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cecotec PoC</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <base href="/">
+</head>
+
+<body layout="row">
+  <!-- <app></app> -->
+  <md-sidenav
+    md-component-id="drawer"
+    class="md-sidenav-left"
+    md-is-locked-open="$mdMedia('gt-sm')"
+    layout="column"
+    ui-view="drawer"
+  ></md-sidenav>
+
+  <md-content layout="column" flex="grow">
+    <main data-flex="noshrink" layout="column" ui-view="layout"></main>
+  </md-content>
+</body>
+
+</html>
