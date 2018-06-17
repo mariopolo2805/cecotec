@@ -1,0 +1,23 @@
+<md-dialog class="md-dialog-w440" aria-label="Edit product">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{$ctrl.product.title}}</h2>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <form name="editForm">
+        <md-input-container class="md-block">
+          <label>Edit description</label>
+          <input ng-model="$ctrl.product.description">
+        </md-input-container>
+      </form>
+    </div>
+  </md-dialog-content>
+
+  <md-dialog-actions layout="row">
+    <span flex></span>
+    <md-button class="md-accent" ng-click="$ctrl.edit($ctrl.product)">Edit</md-button>
+  </md-dialog-actions>
+</md-dialog>

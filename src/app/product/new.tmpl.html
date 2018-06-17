@@ -1,0 +1,25 @@
+<md-dialog class="md-dialog-w440" aria-label="New product">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>New Product</h2>
+    </div>
+  </md-toolbar>
+  <form name="createForm">
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container class="md-block">
+          <label>Title</label>
+          <input ng-model="$ctrl.product.title" required>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Description</label>
+          <input ng-model="$ctrl.product.description" required>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button type="submit" class="md-accent" ng-click="$ctrl.new($ctrl.product)" ng-disabled="createForm.$invalid">Create</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

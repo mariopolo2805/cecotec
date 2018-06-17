@@ -1,1 +1,25 @@
-productList template
+<md-toolbar class="md-primary">
+  <div class="md-toolbar-tools" layout-align="space-between center">
+    <h2 class="md-flex">Cecotec - ProductList</h2>
+    <md-button class="md-raised" ng-click="$ctrl.openNewDialog()">New Product</md-button>
+  </div>
+</md-toolbar>
+
+<md-progress-linear class="md-primary md-hue-1" md-mode="indeterminate" ng-show="$ctrl.isLoading"></md-progress-linear>
+
+<section>
+  <md-card ng-repeat="product in $ctrl.productList track by product.id">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{product.title}}</span>
+        <span class="md-subhead">{{product.description}}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-raised md-primary" ng-click="$ctrl.openEditDialog(product)">Edit</md-button>
+      <md-button class="md-raised md-warn" ng-click="$ctrl.openDeleteDialog(product)">Delete</md-button>
+    </md-card-actions>
+  </md-card>
+  <p ng-if="$ctrl.productList.length === 0">There is no products</p>
+</section>
+

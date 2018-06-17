@@ -17,13 +17,13 @@ body {
     position: relative;
 
     section {
-      position: relative;
-      height: 0;
-      overflow-y: auto;
+      @media screen and (min-width: 1024px) {
+        max-width: 1024px;
+        margin: 0 auto;
 
-      article {
-        position: relative;
-        width: 100%;
+        md-card {
+          min-width: 960px;
+        }
       }
     }
   }

@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": "0.yowkdohoma",
+      "title": "Product1",
+      "description": "Description1",
+      "createdAt": 1529240970750
+    },
+    {
+      "id": "0.pdxydp8j3b",
+      "description": "Description2",
+      "title": "Product2",
+      "createdAt": 1529240981369
+    }
+  ]
+}
