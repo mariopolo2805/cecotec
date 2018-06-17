@@ -17,7 +17,6 @@ module.exports = function karmaConfig(config) {
     },
     files: ['src/tests.webpack.js'],
     preprocessors: {
-      'src/app/app.js': ['webpack', 'sourcemap'],
       'src/tests.webpack.js': ['webpack', 'sourcemap'],
     },
     browsers: ['PhantomJS'],
@@ -31,10 +30,10 @@ module.exports = function karmaConfig(config) {
     plugins: [
       'karma-coverage',
       'karma-jasmine',
-      'karma-babel-preprocessor',
       'karma-phantomjs-launcher',
-      'karma-webpack',
       'karma-sourcemap-loader',
+      'karma-spec-reporter',
+      'karma-webpack',
     ],
     webpack,
     // Hide webpack build information from output

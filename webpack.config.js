@@ -71,18 +71,6 @@ module.exports = (function makeWebpackConfig() {
     ],
   };
 
-  if (isTest) {
-    config.module.rules.push({
-      enforce: 'pre',
-      test: /\.js$/,
-      exclude: [/node_modules/, /\.spec\.js$/],
-      loader: 'istanbul-instrumenter-loader',
-      query: {
-        esModules: true,
-      },
-    });
-  }
-
   config.plugins = [
     new webpack.LoaderOptionsPlugin({
       test: /\.scss$/i,
